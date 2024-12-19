@@ -9,6 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  cursor: default;
 }
 
 p {
@@ -330,6 +331,7 @@ section {
 }
 
 .experience-details-container {
+  cursor: default;
   display: flex;
   justify-content: center;
   flex-direction: column;
