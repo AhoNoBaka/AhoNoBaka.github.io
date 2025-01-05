@@ -35,3 +35,13 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+let currentSlide = 0;
+
+function moveSlide(direction) {
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+  const sliderWrapper = document.querySelector('.slider-wrapper');
+  sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+}

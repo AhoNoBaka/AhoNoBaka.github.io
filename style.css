@@ -304,7 +304,6 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
-  /*Where Starts changes*/
   overflow: visible;
 }
 
@@ -384,7 +383,6 @@ article .icon {
 }
 
 .project-title {
-  /* Change Started here */
   text-align: center;
   margin: 1rem;
   color: black;
@@ -478,6 +476,50 @@ article .icon {
 .modal-text {
   text-align: center;
   margin-top: 20px;
+}
+
+/* Slider container */
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Slider wrapper */
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Individual slide */
+.slide {
+  margin-right: 10px;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navigation buttons */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 40px 10px;
+}
+
+.slider-nav.prev {
+  left: 10px;
+}
+
+.slider-nav.next {
+  right: 10px;
 }
 
 /* CONTACT */

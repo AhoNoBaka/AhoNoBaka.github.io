@@ -240,55 +240,42 @@
       />
     </section>
     <section id="projects">
-     <p class="section__text__p1">Browse My Recent</p>
+      <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-       <div class="experience-details-container">
-        <div class="about-containers">
-          <!-- 
-          <div class="details-container color-container project" onclick="openModal('./assets/project-1.png', 'Brief summary of the project...', 'https://github.com/your-github-repo', 'https://your-live-demo-link')">
-            <img src="assets/project-1.png" alt="Project 1" class="project-img">
-            <div class="overlay">
-              <div class="text">Stars Falling Effects</div>
+      <div class="slider-container">
+        <div class="slider-wrapper">
+          <div class="slide">
+            <div class="details-container color-container project" onclick="openModal('./assets/project-1.png', 'Falling Stars Effects that when got hit the cursor will play assigned sfx.', 'https://github.com/AhoNoBaka/Capstone-BsMMA', 'https://ahonobaka.github.io/Capstone-BsMMA/')">
+              <img src="assets/project-1.png" alt="Project 1" class="project-img">
+              <div class="overlay">
+                <div class="text">Stars Falling Effects</div>
+              </div>
+              <h2 class="experience-sub-title project-title">Falling Stars</h2>
             </div>
-            <h2 class="experience-sub-title project-title">Project Title</h2>
           </div>
-
-          Copy and paste the template below
-          -->
-          <div class="details-container color-container project" onclick="openModal('./assets/project-1.png', 'Falling Stars Effects that when got hit the cursor will play assigned sfx.', 'https://github.com/AhoNoBaka/Capstone-BsMMA', 'https://ahonobaka.github.io/Capstone-BsMMA/')">
-            <img src="assets/project-1.png" alt="Project 1" class="project-img">
-            <div class="overlay">
-              <div class="text">Stars Falling Effects</div>
+          <div class="slide">
+            <div class="details-container color-container project" onclick="openModal('assets/modals.png', 'Modals to choose from.', 'https://github.com/AhoNoBaka/Modals', 'https://ahonobaka.github.io/Modals/')">
+              <img src="assets/modals.png" alt="Project 2" class="project-img">
+              <div class="overlay">
+                <div class="text">Modals</div>
+              </div>
+              <h2 class="experience-sub-title project-title">Modals</h2>
             </div>
-            <h2 class="experience-sub-title project-title">Falling Stars</h2>
           </div>
-          <!-- Copy and paste the template below -->
-          <div class="details-container color-container project" onclick="openModal('assets/modals.png', 'Modals to choose from.', 'https://github.com/AhoNoBaka/Modals', 'https://ahonobaka.github.io/Modals/')">
-            <img src="assets/modals.png" alt="Project 2" class="project-img">
-            <div class="overlay">
-              <div class="text">Modals</div>
+          <div class="slide">
+            <div class="details-container color-container project" onclick="openModal('assets/RPS.png', 'Rock Paper Scissors Game using HTML, CSS, and JavaScript', 'https://github.com/AhoNoBaka/rock-paper-scissors', 'https://ahonobaka.github.io/rock-paper-scissors/')">
+              <img src="assets/RPS.png" alt="Project 3" class="project-img">
+              <div class="overlay">
+                <div class="text">Rock Paper Scissors</div>
+              </div>
+              <h2 class="experience-sub-title project-title">Rock Paper Scissors</h2>
             </div>
-            <h2 class="experience-sub-title project-title">Modals</h2>
           </div>
-        <!-- Copy and paste the template below -->
-        <div class="details-container color-container project" onclick="openModal('assets/RPS.png', 'Rock Paper Scissors Game using HTML, CSS, and JavaScript', 'https://github.com/AhoNoBaka/rock-paper-scissors', 'https://ahonobaka.github.io/rock-paper-scissors/')">
-          <img src="assets/RPS.png" alt="Project 3" class="project-img">
-          <div class="overlay">
-            <div class="text">Rock Paper Scissors</div>
-          </div>
-          <h2 class="experience-sub-title project-title">Rock Paper Scissors</h2>
         </div>
-        <!-- Copy and paste the template below -->
-        </div>
+        <button class="slider-nav prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="slider-nav next" onclick="moveSlide(1)">&#10095;</button>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-      
-
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
       <p class="section__text__p1">More to come soon. Hopefuly^^</p>
     </section>
     <section id="contact">
