@@ -60,13 +60,13 @@
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
-            onclick="location.href='https://www.linkedin.com/in/adrian-jay-gimeno-46b778246/'"
+            onclick="window.open('https://www.linkedin.com/in/adrian-jay-gimeno-46b778246/', '_blank')"
           />
           <img
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="location.href='https://github.com/AhoNoBaka'"
+            onclick="window.open('https://github.com/AhoNoBaka', '_blank')"
           />
         </div>
       </div>
@@ -244,54 +244,39 @@
       <h1 class="title">Projects</h1>
        <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container color-container project">
-          <!--
-            <div class="details-container color-container project">
-                <img src="path_to_your_project_image" alt="Project Image" class="project-img">
-                <div class="overlay">
-                    <div class="text">Brief summary of the project...</div>
-                    <div class="btn-container">
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/your-github-repo', '_blank')">Github</button>
-                        <button class="btn btn-color-2 project-btn" onclick="window.open('https://your-live-demo-link', '_blank')">Live Demo</button>
-                    </div>
-                </div>
-                <h2 class="experience-sub-title project-title">Project Title</h2>
+          <!-- 
+          <div class="details-container color-container project" onclick="openModal('./assets/project-1.png', 'Brief summary of the project...', 'https://github.com/your-github-repo', 'https://your-live-demo-link')">
+            <img src="assets/project-1.png" alt="Project 1" class="project-img">
+            <div class="overlay">
+              <div class="text">Stars Falling Effects</div>
             </div>
-            Copy and paste the template below
+            <h2 class="experience-sub-title project-title">Project Title</h2>
+          </div>
+
+          Copy and paste the template below
           -->
-              <img src="./assets/project-1.png" alt="Project 1" class="project-img">
-              <div class="overlay">
-                  <div class="text">Project One: Capstone of BMMA Students that wanted to add star particles that are interactable with users that produces sound when the stars hit the cursor.</div>
-                  <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/AhoNoBaka/Capstone-BsMMA', '_blank')">Github</button>
-                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://ahonobaka.github.io/Capstone-BsMMA/', '_blank')">Live Demo</button>
-                  </div>
-              </div>
-              <h2 class="experience-sub-title project-title">Project One</h2>
+          <div class="details-container color-container project" onclick="openModal('./assets/project-1.png', 'Falling Stars Effects that when got hit the cursor will play assigned sfx.', 'https://github.com/AhoNoBaka/Capstone-BsMMA', 'https://ahonobaka.github.io/Capstone-BsMMA/')">
+            <img src="assets/project-1.png" alt="Project 1" class="project-img">
+            <div class="overlay">
+              <div class="text">Stars Falling Effects</div>
+            </div>
+            <h2 class="experience-sub-title project-title">Falling Stars</h2>
           </div>
           <!-- Copy and paste the template below -->
-          <div class="details-container color-container project">
-            <img src="assets\modals.png" alt="Project 2" class="project-img">
+          <div class="details-container color-container project" onclick="openModal('assets/modals.png', 'Modals to choose from.', 'https://github.com/AhoNoBaka/Modals', 'https://ahonobaka.github.io/Modals/')">
+            <img src="assets/modals.png" alt="Project 2" class="project-img">
             <div class="overlay">
-                <div class="text">Modals selection to be used</div>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/AhoNoBaka/Modals', '_blank')">Github</button>
-                    <button class="btn btn-color-2 project-btn" onclick="window.open('https://ahonobaka.github.io/Modals/', '_blank')">Live Demo</button>
-                </div>
+              <div class="text">Modals</div>
             </div>
-            <h2 class="experience-sub-title project-title">Project Title</h2>
-        </div>
+            <h2 class="experience-sub-title project-title">Modals</h2>
+          </div>
         <!-- Copy and paste the template below -->
-        <div class="details-container color-container project">
-          <img src="assets/RPS.png" alt="Rock Paper Scissors" class="project-img">
+        <div class="details-container color-container project" onclick="openModal('assets/RPS.png', 'Rock Paper Scissors Game using HTML, CSS, and JavaScript', 'https://github.com/AhoNoBaka/rock-paper-scissors', 'https://ahonobaka.github.io/rock-paper-scissors/')">
+          <img src="assets/RPS.png" alt="Project 3" class="project-img">
           <div class="overlay">
-              <div class="text">Rock Paper Scissors game HTML, CSS, and JavaScript</div>
-              <div class="btn-container">
-                  <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/AhoNoBaka/rock-paper-scissors/blob/main/index.html', '_blank')">Github</button>
-                  <button class="btn btn-color-2 project-btn" onclick="window.open('https://ahonobaka.github.io/rock-paper-scissors/', '_blank')">Live Demo</button>
-              </div>
-            </div>
-            <h2 class="experience-sub-title project-title">Project Title</h2>
+            <div class="text">Rock Paper Scissors</div>
+          </div>
+          <h2 class="experience-sub-title project-title">Rock Paper Scissors</h2>
         </div>
         <!-- Copy and paste the template below -->
         </div>
@@ -341,6 +326,17 @@
       </nav>
       <p>Copyright &#169; 2024 Adrian Jay Gimeno. All Rights Reserved.</p>
     </footer>
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="" alt="Project Image" class="modal-img" id="modalImg">
+        <div class="modal-text" id="modalText"></div>
+        <div class="btn-container">
+          <button class="btn btn-color-2 project-btn" id="githubBtn">Github</button>
+          <button class="btn btn-color-2 project-btn" id="liveDemoBtn">Live Demo</button>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
