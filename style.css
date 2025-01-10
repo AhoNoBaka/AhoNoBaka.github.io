@@ -495,7 +495,7 @@ article .icon {
 .slide {
   margin-right: 10px;
   box-sizing: border-box;
-  flex: 0 0 auto;
+  flex: 1 1 100%;
   width: 60%;
   display: flex;
   justify-content: center;
